@@ -26,7 +26,17 @@ c(1, 2, 'f')
 
 <!-- Challenge 1 answer begin -->
 
-Your answer goes here
+numeric vector
+
+\[1\] 1, 2, 3
+
+character vector
+
+\[1\] d, e, f
+
+character b/c f is included
+
+\[1\] 1, 2, f
 
 <!-- Challenge 1 answer end -->
 
@@ -36,7 +46,7 @@ Look at the help for the `paste` function. You will need to use it later. What's
 
 <!-- Challenge 2 answer begin -->
 
-Your answer goes here
+sep is a character string to separate the terms, and collapse is an optional character string to separate the results
 
 <!-- Challenge 2 answer end -->
 
@@ -52,6 +62,8 @@ Use `??"read table"` to look up functions related to reading in tabular data.
 
 <!-- Challenge 3 answer begin -->
 
-Your answer goes here
+read.table() has both dec and sep : sep ='\\t'
+
+read.delim has both dec and slash,
 
 <!-- Challenge 3 answer end -->

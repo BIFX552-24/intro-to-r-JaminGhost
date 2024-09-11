@@ -39,7 +39,9 @@ Open an RStudio project through the file system
 
 <!-- Challenge 2 answer begin -->
 
-![](screenshot.png)
+![](images/Screenshot%202024-09-07%20101850.png)
+
+![](images/Screenshot%202024-09-07%20102313.png)
 
 <!-- Challenge 2 answer end -->
 

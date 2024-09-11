@@ -1,6 +1,6 @@
 ---
 title: "RStudio Intro"
-format: html
+format: html 
 editor: visual
 ---
 
@@ -35,7 +35,15 @@ celsius2kelvin
 <!-- Challenge 1 answer begin -->
 
 -   Valid
+    -   min_height
+    -   max.height
+    -   MaxLength
+    -   .mass
+    -   celsius2kelvin
 -   Invalid
+    -   \_age
+    -   min-length
+    -   2widths
 
 <!-- Challenge 1 answer end -->
 
@@ -52,6 +60,14 @@ age <- age - 20
 
 <!-- Challenge 2 answer begin -->
 
+mass= 47.5
+
+age = 122
+
+mass = 109.25
+
+age= 102
+
 <!-- Challenge 2 answer end -->
 
 #### Challenge 3
@@ -62,6 +78,11 @@ Run the code from the previous challenge, and write a command to compare `mass` 
 
 ```{r}
 # comparison code goes here
+mass<-109.25
+age<-102
+mass>age
+mass<age
+
 ```
 
 <!-- Challenge 3 answer end -->
@@ -74,6 +95,8 @@ Clean up your working environment by deleting the mass and age variables.
 
 ```{r}
 # code goes here
+rm(mass)
+rm(age)
 ```
 
 <!-- Challenge 4 answer end -->
@@ -85,10 +108,21 @@ Install the following packages: `ggplot2`, `dplyr`, `gapminder`
 <!-- Challenge 5 answer begin -->
 
 ```{r}
+update.packages("ggplot2")
+update.packages("dplyr")
+update.packages("gapminder")
+
+install.packages("ggplot2")
+install.packages("dplyr")
+install.packages("gapminder")
+```
+
+```{r}
 # this will fail if the required packages are not installed
-library(ggplot2)
-library(dplyr)
-library(gapminder)
+
+library("ggplot2")
+library("dplyr")
+library("gapminder")
 ```
 
 <!-- Challenge 5 answer end -->

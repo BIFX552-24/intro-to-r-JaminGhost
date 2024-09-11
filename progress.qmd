@@ -18,7 +18,6 @@ On a related note, if you are a student (i.e. if you must have a '.edu' email an
 
 ```{r}
 #| include: false
-
 library(dplyr)
 library(purrr)
 
