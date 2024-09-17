@@ -37,16 +37,16 @@ cats$weight <- as.numeric(cats$weight)
 cats$age <- c(2,3,5,1)
 
 # create human_age
-## your code goes here
+human_age<-cats$age*7
 
 # convert human_age to a factor
-## your code goes here
+human_age<-as.factor(human_age)
 
 # convert human_age back to a numeric vector
-## your code goes here
+as.numeric(human_age)
 ```
 
-Explanation: ...
+when we converted cats age to human age it was stored as integers , labeled as characters. When converted back to numeric it listed the integers instead of the character. It was needed to take the factor(integers) into a character into a numeric
 
 <!-- Challenge 1 answer end -->
 
@@ -72,14 +72,20 @@ Then use `rbind` to add an entry for someone you work with. Finally, use `cbind`
 
 ```{r}
 # create people
-people <- ## your code goes here ##
+people <- data.frame(
+  first_name="jamilet",
+  last_name="cordon",
+  lucky_number="222" )
   
 # add a team member
-## your code goes here ##
+people<-rbind(people,
+              data.frame(
+                first_name="jenifer",
+                last_name="cordon",
+                lucky_number="777"))
   
 # add coffee break
-## your code goes here ##
-  
+people<- cbind(people,coffee_break=c(TRUE, FALSE))
 people
 ```
 
@@ -97,7 +103,14 @@ Searching for observations specifically in the middle isn't too hard, but we cou
 library(gapminder)
 data(gapminder)
 
-# your commands go here
+# last line
+tail(gapminder)
+
+#any values in middle
+set.seed(34343)
+gapminder[sample(1:nrow(gapminder), 10),]
+
+
 ```
 
 <!-- Challenge 3 answer end -->
@@ -111,7 +124,7 @@ Run the script using the `source` function, using the file path as its argument.
 <!-- Challenge 4 answer begin -->
 
 ```{r}
-# load gapminder by sourcing your script here
+source('scripts/gapminder.R')
 ```
 
 <!-- Challenge 4 answer end -->
@@ -126,6 +139,6 @@ str(gapminder)
 
 <!-- Challenge 5 answer begin -->
 
-Explain the output of `str(gapminder)` here.
+in str gapminder I can see the categorizes like continent, year, population, life expediency, and gdp per cap. Each category has listed the data type.
 
 <!-- Challenge 5 answer end -->
