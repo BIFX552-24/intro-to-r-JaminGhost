@@ -108,6 +108,7 @@ Install the following packages: `ggplot2`, `dplyr`, `gapminder`
 <!-- Challenge 5 answer begin -->
 
 ```{r}
+#| eval: false
 update.packages("ggplot2")
 update.packages("dplyr")
 update.packages("gapminder")
