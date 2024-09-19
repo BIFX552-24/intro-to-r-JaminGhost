@@ -97,7 +97,7 @@ There's a wrong way (using only `==`), which will give you a warning; a clunky w
 
 ```{r}
 # wrong way to subset `countries`
-countries[countries == seAsia]
+#countries[countries == seAsia]
 # clunky way to subset `countries`
 countries[countries=='Myanmar'|
             countries=='Thailand'|
@@ -132,7 +132,7 @@ D. `m[2,c(4,5)]`
 
 <!-- Challenge 4 answer begin -->
 
-D - `m[2,c(4,5)]`
+D
 
 <!-- Challenge 4 answer end -->
 
