@@ -31,8 +31,12 @@ Write a single command (which can span multiple lines and includes pipes) that w
 <!-- Challenge 1 answer begin -->
 
 ```{r}
-# insert code here
+africa<-filter(gapminder, continent =='Africa')%>%
+  select(lifeExp, country, year)
+# the table produces 624 rows x 3 columns 
 ```
+
+this subset of `gapminder` contains `r nrow(africa)` and `r ncol(africa)` columns. This is due to amount years within the data set. There are `r length(unique(africa$year))` years worth of data for Africa. Additionally it includes `r length(unique(africa$country))` countries within Africa.
 
 <!-- Challenge 1 answer end -->
 
@@ -43,8 +47,15 @@ Calculate the average life expectancy per country. Which has the longest average
 <!-- Challenge 2 answer begin -->
 
 ```{r}
-# insert code here
+ave_lifeExp <-group_by(gapminder, country) %>%
+  summarize(mean_lifeExp = mean(lifeExp)) %>%
+  ungroup()
+filter(ave_lifeExp, mean_lifeExp == max(mean_lifeExp))
+filter(ave_lifeExp, mean_lifeExp == min(mean_lifeExp))
+
 ```
+
+The country with the longest life expectancy is Iceland at a mean age of 76 years old. The country with shortest life expectancy is Sierra Leone with the average age being 36 years old.
 
 <!-- Challenge 2 answer end -->
 
@@ -55,7 +66,14 @@ Calculate the average life expectancy in 2002 of 2 randomly selected countries f
 <!-- Challenge 3 answer begin -->
 
 ```{r}
-# insert code here
+set.seed(256254)
+gapminder %>%
+  filter( year == 2002)%>%
+  group_by(continent)%>%
+  slice_sample(n=2) %>%
+  summarize(mean_lifeExp = mean(lifeExp))%>%
+  ungroup() %>%
+  arrange(desc(continent))
 ```
 
 <!-- Challenge 3 answer end -->

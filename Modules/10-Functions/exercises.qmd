@@ -29,7 +29,14 @@ Hint: To convert from Kelvin to Celsius you subtract 273.15
 <!-- Challenge 1 answer begin -->
 
 ```{r}
-# your code goes here
+# kelvin_to_celsius
+# Convert temperature from K to c
+
+Kelvin_to_celsius <-function(temp)
+{
+  celsius <-temp-273.15
+  return(celsius)
+}
 ```
 
 <!-- Challenge 1 answer end -->
@@ -56,7 +63,17 @@ Define the function to convert directly from Fahrenheit to Celsius, by reusing y
 <!-- Challenge 2 answer begin -->
 
 ```{r}
-# your code goes here
+# fahr_to_celsius
+# Convert temperature from F to c
+
+fahr_to_celsius <-function(temp)
+{
+  celsius <-fahr_to_kelvin(temp)%>%
+    Kelvin_to_celsius()
+  
+  return(celsius)
+}
+
 ```
 
 <!-- Challenge 2 answer end -->
@@ -68,7 +85,19 @@ Use defensive programming to ensure that our `fahr_to_celsius()` function throws
 <!-- Challenge 3 answer begin -->
 
 ```{r}
-# your code goes here
+# fahr_to_celsius
+# Convert temperature from K to c
+
+fahr_to_celsius <-function(temp)
+{
+  stopifnot(is.numeric(temp))
+  
+  celsius <-fahr_to_kelvin(temp)%>%
+    Kelvin_to_celsius()
+  
+  return(celsius)
+}
+
 ```
 
 <!-- Challenge 3 answer end -->
@@ -91,8 +120,16 @@ Write a function called `fence()` that takes two vectors as arguments, called `t
 <!-- Challenge 4 answer begin -->
 
 ```{r}
-# Your code goes here
-# check to make sure your code works:
+# fence
+#wrap the words in 'text' inside of 'wrapper'
+#@paramtxet character vector 
+# @param wrapper character value 
+# @return character value
+fence<-function(text,wrapper)
+{
+  paste(wrapper, paste(text,collapse =''), wrapper)
+}
+#check to make sure your code works: 
 fence(text=best_practice, wrapper="***")
 ```
 

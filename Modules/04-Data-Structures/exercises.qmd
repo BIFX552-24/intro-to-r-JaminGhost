@@ -162,6 +162,8 @@ cats[1, ]
 
 this returns the all the data frame of the first value, calico.
 
+<!-- Challenge 5 answer end -->
+
 #### Challenge 6
 
 Given `matrix_example`,
