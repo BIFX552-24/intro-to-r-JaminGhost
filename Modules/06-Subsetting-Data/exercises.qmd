@@ -152,7 +152,7 @@ Using your knowledge of both list and vector subsetting, extract the number 2 fr
 xlist$b[2]
 ```
 
-<!-- Challe$nge 5 answer end -->
+<!-- Challenge 5 answer end -->
 
 #### Challenge 6
 

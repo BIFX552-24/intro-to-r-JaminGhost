@@ -36,8 +36,10 @@ Using the `full_join` function, join tables `jdf4` and `jdf5`. What has happened
 <!-- Challenge 1 answer begin -->
 
 ```{r}
-# Insert code here
+full_join(jdf4,jdf5)
 ```
+
+`P26039` is only in the jdf4 data set, whereas `P02468` is found in the jdf5, each of the categorizes are found in the joined table, so there are no missing categorizes, but there are a few missing data values, which are NA.
 
 <!-- Challenge 1 answer end -->
 
@@ -48,7 +50,7 @@ Join tables `jdf4` and `jdf5`, keeping only observations in `jdf4`.
 <!-- Challenge 2 answer begin -->
 
 ```{r}
-# Insert code here
+left_join(jdf4,jdf5)
 ```
 
 <!-- Challenge 2 answer end -->
@@ -60,7 +62,7 @@ Join tables `jdf4` and `jdf5`, keeping only observations in `jdf5`.
 <!-- Challenge 3 answer begin -->
 
 ```{r}
-# Insert code here
+right_join(jdf4, jdf5)
 ```
 
 <!-- Challenge 3 answer end -->
@@ -72,7 +74,7 @@ Join tables `jdf4` and `jdf5`, keeping observations observed in both tables.
 <!-- Challenge 4 answer begin -->
 
 ```{r}
-# Insert code here
+inner_join(jdf4, jdf5)
 ```
 
 <!-- Challenge 4 answer end -->
@@ -89,6 +91,6 @@ interpret the result, where both tables have duplicated keys.
 
 <!-- Challenge 5 answer begin -->
 
-*insert answer here*
+*When looking at the data set independently you can see that jdf6 has different and less categorizes compared to jdf7, which has more categorical set of data. You can also note that the set Q99PL5 is seen twice in both of the data et jdf6, and jdf7 , so it causes isoform to be two separate data sets instead of matching. if you specifically match isofrm with isofrom \_num you can remove the redundancies.*
 
 <!-- Challenge 5 answer end -->
